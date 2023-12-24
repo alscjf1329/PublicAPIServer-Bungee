@@ -13,7 +13,7 @@ import org.dev.publicapiserverbungee.views.OutView;
 
 public class PublicServer {
     private static final String CONFIG_FILE_NAME = "config.yml";
-    private static final String PATH_OPTION_FORMAT = "server.%s";
+    private static final String PATH_OPTION_FORMAT = "server.path.%s";
     private static final String PORT_OPTION_NAME = "server.port";
     private static final String LOG_OPTION = "server.log_flag";
     private static volatile PublicServer instance = null;
