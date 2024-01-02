@@ -45,7 +45,7 @@ public class PublicServer {
                 // 여기에 기본 설정 값 설정
                 config.set(PORT_OPTION_NAME, DEFAULT_PORT);
                 config.set(LOG_OPTION, true);
-                Arrays.stream(API.values())
+                Arrays.stream(Handler.values())
                         .forEach(api -> config.set(String.format(PATH_OPTION_FORMAT, api.getName()),
                                 api.getDefaultPath()));
                 ConfigurationProvider.getProvider(YamlConfiguration.class).save(config, configFile);
@@ -71,9 +71,9 @@ public class PublicServer {
                 OutView.SERVER_START_FORMAT.print(port);
                 OutView.API_PATH_LIST_TITLE.print();
             }
-            Arrays.stream(API.values()).forEach(api -> {
+            Arrays.stream(Handler.values()).forEach(api -> {
                 String apiPath = config.getString(String.format(PATH_OPTION_FORMAT, api.getName()),
-                        API.PLAYER_STATUS.getDefaultPath());
+                        Handler.PLAYER_STATUS.getDefaultPath());
                 if (logFlag) {
                     OutView.API_PATH_FORMAT.print(api.getName(), apiPath);
                 }

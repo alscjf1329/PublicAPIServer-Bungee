@@ -12,9 +12,6 @@ shadowJar {
     manifest {
         attributes 'Main-Class': 'my.package.MyMain'
     }
-    // jar 추출 디렉토리
-    // destinationDirectory.set(file("C:\\Users\\khw32\\Desktop\\RankingPluign")) // 형우
-    destinationDirectory.set(file("/Users/yangmincheol/Desktop/server/mineServer/waterfall/plugins"))
 }
 
 repositories {
@@ -34,7 +31,7 @@ dependencies {
     compileOnly "io.github.waterfallmc:waterfall-api:1.19-R0.1-SNAPSHOT"
 }
 
-def targetJavaVersion = 8
+def targetJavaVersion = 17
 java {
     def javaVersion = JavaVersion.toVersion(targetJavaVersion)
     sourceCompatibility = javaVersion

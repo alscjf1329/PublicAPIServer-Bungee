@@ -1,15 +1,15 @@
 package org.dev.publicapiserverbungee;
 
 import com.sun.net.httpserver.HttpHandler;
-import org.dev.publicapiserverbungee.api.PlayerStatusAPI;
+import org.dev.publicapiserverbungee.handler.PlayerStatusHandler;
 
-public enum API {
-    PLAYER_STATUS("validateOnlineUserPath", "/player-status", new PlayerStatusAPI());
+public enum Handler {
+    PLAYER_STATUS("validateOnlineUserPath", "/player-status", new PlayerStatusHandler());
     private final String name;
     private final String defaultPath;
     private final HttpHandler handler;
 
-    API(String name, String defaultPath, HttpHandler handler) {
+    Handler(String name, String defaultPath, HttpHandler handler) {
         this.name = name;
         this.defaultPath = defaultPath;
         this.handler = handler;
