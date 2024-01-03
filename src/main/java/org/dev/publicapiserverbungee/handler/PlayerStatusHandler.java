@@ -44,8 +44,6 @@ public class PlayerStatusHandler implements HttpHandler {
 
         // JSON으로 변환
         JSONObject jsonResponse = new JSONObject(validationResult);
-        System.out.println(validationResult);
-        System.out.println(jsonResponse);
 
         // 응답 헤더 설정
         exchange.getResponseHeaders().set("Content-Type", "application/json");
