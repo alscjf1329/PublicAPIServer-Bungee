@@ -95,7 +95,9 @@ crash-reports/
 logs/
 *.log.gz
 usercache.json
-session.lock
+*.lock
+*.bin
+*.probe
 
 # Build directories #
 /target/
