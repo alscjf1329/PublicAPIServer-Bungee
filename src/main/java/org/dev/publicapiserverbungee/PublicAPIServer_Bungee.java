@@ -1,17 +1,26 @@
 package org.dev.publicapiserverbungee;
 
 import net.md_5.bungee.api.plugin.Plugin;
+import org.dev.publicapiserverbungee.server.PublicServer;
 
 public final class PublicAPIServer_Bungee extends Plugin {
+
+    private static Plugin pluginInstance;
+
     @Override
     public void onEnable() {
         // Plugin startup logic
-        new Thread(() -> PublicServer.getInstance().start(this)).start();
+        pluginInstance = this;
+        new Thread(() -> PublicServer.getInstance(this).start()).start();
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        PublicServer.getInstance().stop();
+        PublicServer.getInstance(this).stop();
+    }
+
+    public static Plugin getPluginInstance() {
+        return pluginInstance;
     }
 }
