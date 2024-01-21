@@ -38,6 +38,14 @@ public class ConfigManager {
         return configuration;
     }
 
+    public static void reloadConfig() {
+        try {
+            configuration = readConfigFile();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     private static Configuration readConfigFile() throws IOException {
         Plugin plugin = PublicAPIServer_Bungee.getPluginInstance();
         File configFile = new File(plugin.getDataFolder(), CONFIG_FILE_NAME);
