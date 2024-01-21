@@ -34,8 +34,7 @@ public class PublicServer {
     }
 
     public void start() {
-        Configuration config = ConfigManager.getInstance(
-            PublicAPIServer_Bungee.getPluginInstance());
+        Configuration config = ConfigManager.getInstance();
 
         int port = config.getInt(ConfigManager.PORT_OPTION_NAME, DEFAULT_PORT);
         boolean logFlag = config.getBoolean(ConfigManager.LOG_OPTION, true);
