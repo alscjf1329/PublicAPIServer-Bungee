@@ -1,0 +1,3 @@
+name: PublicAPIServer-Bungee
+version: '${version}'
+main: org.dev.publicapiserverbungee.PublicAPIServer_Bungee
