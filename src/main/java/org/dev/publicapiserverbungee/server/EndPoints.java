@@ -1,8 +1,10 @@
 package org.dev.publicapiserverbungee.server;
 
 import com.sun.net.httpserver.HttpHandler;
+import lombok.Getter;
 import org.dev.publicapiserverbungee.handler.PlayerStatusHandler;
 
+@Getter
 public enum EndPoints {
     PLAYER_STATUS("validateOnlineUserPath", "/player-status", new PlayerStatusHandler());
     private final String name;
@@ -15,15 +17,4 @@ public enum EndPoints {
         this.handler = handler;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getDefaultPath() {
-        return defaultPath;
-    }
-
-    public HttpHandler getHandler() {
-        return handler;
-    }
-    }
+}

@@ -1,10 +1,12 @@
 package org.dev.publicapiserverbungee;
 
+import lombok.Getter;
 import net.md_5.bungee.api.plugin.Plugin;
 import org.dev.publicapiserverbungee.server.PublicServer;
 
 public final class PublicAPIServer_Bungee extends Plugin {
 
+    @Getter
     private static Plugin pluginInstance;
 
     @Override
@@ -20,7 +22,4 @@ public final class PublicAPIServer_Bungee extends Plugin {
         PublicServer.getInstance(this).stop();
     }
 
-    public static Plugin getPluginInstance() {
-        return pluginInstance;
-    }
 }
