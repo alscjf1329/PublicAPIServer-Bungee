@@ -24,6 +24,7 @@ repositories {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    compileOnly 'org.projectlombok:lombok:1.18.30'
     compileOnly "io.github.waterfallmc:waterfall-api:1.19-R0.1-SNAPSHOT"
 }
 
