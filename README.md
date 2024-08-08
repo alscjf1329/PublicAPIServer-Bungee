@@ -18,8 +18,6 @@ PublicAPIServer-Bungee는 Minecraft Bungee 서버 플러그인으로, 해당 서
 - Bungee 서버 내 `plugins/libs` 디렉토리에 존재해야 하는 라이브러리:
     - `json-20231013` 이상의 라이브러리
         - [JSON 라이브러리 - Maven Repository](https://mvnrepository.com/artifact/org.json/json)
-    - `projectlombok` 1.18.30이상의 라이브러리
-        - [Project Lombok 라이브러리 - Public Doc](https://projectlombok.org/download)
 
 ### `config.yml` 설정 파일
 
